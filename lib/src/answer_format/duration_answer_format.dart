@@ -14,7 +14,7 @@ class DurationAnswerFormat implements AnswerFormat {
         defaultValue: json["defaultValue"] != null
             ? Duration(minutes: json["defaultValue"])
             : null,
-        hint: json["hint"],
+        hint: json["hint"] ?? '',
       );
 
   Map<String, dynamic> toJson() => {"defaultValue": defaultValue, "hint": hint};
