@@ -37,7 +37,7 @@ class _DurationAnswerViewState extends State<DurationAnswerView> {
         id: widget.questionStep.stepIdentifier,
         startDate: _startDate,
         endDate: DateTime.now(),
-        valueIdentifier: _result.inMinutes.toString(),
+        valueIdentifier: _result?.inMinutes.toString() ?? '',
         result: _result,
       ),
       isValid: widget.questionStep.isOptional || _result != null,
